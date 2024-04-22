@@ -11,6 +11,7 @@
 		BD8028622BC9841600369BB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8028612BC9841600369BB7 /* ContentView.swift */; };
 		BD8028642BC9841700369BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8028632BC9841700369BB7 /* Assets.xcassets */; };
 		BD8028672BC9841700369BB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8028662BC9841700369BB7 /* Preview Assets.xcassets */; };
+		E28B96DC2BD6B20F00E33E47 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B96DB2BD6B20F00E33E47 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		BD8028612BC9841600369BB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD8028632BC9841700369BB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD8028662BC9841700369BB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E28B96DB2BD6B20F00E33E47 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				BD80285F2BC9841600369BB7 /* Build_Your_Own_Final_ProjectApp.swift */,
-				BD8028612BC9841600369BB7 /* ContentView.swift */,
+				E28B96DD2BD6B25900E33E47 /* Views */,
 				BD8028632BC9841700369BB7 /* Assets.xcassets */,
 				BD8028652BC9841700369BB7 /* Preview Content */,
 			);
@@ -65,6 +67,15 @@
 				BD8028662BC9841700369BB7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E28B96DD2BD6B25900E33E47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD8028612BC9841600369BB7 /* ContentView.swift */,
+				E28B96DB2BD6B20F00E33E47 /* GameView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD8028622BC9841600369BB7 /* ContentView.swift in Sources */,
+				E28B96DC2BD6B20F00E33E47 /* GameView.swift in Sources */,
 				BD8028602BC9841600369BB7 /* Build_Your_Own_Final_ProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
