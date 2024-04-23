@@ -18,7 +18,7 @@ struct ContentView: View {
                 Color.blue.opacity(0.7).ignoresSafeArea(.all)
             VStack {
                 Text("Find Your Match!")
-                    .font(.title).bold()
+                    .font(Font.custom("Marker Felt", size: 35))
                     Spacer()
                 
                 Image("memory")
