@@ -26,8 +26,9 @@ struct ContentView: View {
                 } label: {
                     CustomButton(text: "Play")
                         .cornerRadius(25)
+                        .shadow(radius: 20)
                 }
-            .padding()
+                .padding()
             }
         }
     }
