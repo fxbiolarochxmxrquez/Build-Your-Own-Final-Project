@@ -25,7 +25,7 @@ struct ContentView: View {
                     GameView()
                 } label: {
                     CustomButton(text: "Play")
-                
+                        .cornerRadius(25)
                 }
             .padding()
             }
