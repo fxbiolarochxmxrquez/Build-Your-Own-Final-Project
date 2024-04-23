@@ -19,7 +19,15 @@ struct ContentView: View {
             VStack {
                 Text("Find Your Match!")
                     .font(.title).bold()
+                    Spacer()
+                
+                Image("memory")
+                    .resizable()
+                    .frame(width: 170, height: 150)
                 Spacer()
+                Spacer()
+                Spacer()
+                
             }
                 NavigationLink {
                     GameView()
