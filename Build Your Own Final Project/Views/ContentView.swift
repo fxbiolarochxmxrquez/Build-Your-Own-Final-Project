@@ -25,7 +25,7 @@ struct ContentView: View {
                             .cornerRadius(20)
                     }
                     NavigationLink {
-                        GameView()
+                        GridOptions()
                     } label: {
                         CustomButton(text: "Play")
                             .cornerRadius(25)
