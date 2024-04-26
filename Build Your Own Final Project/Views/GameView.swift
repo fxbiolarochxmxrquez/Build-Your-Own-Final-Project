@@ -13,7 +13,12 @@ struct GameView: View {
             ZStack {
                 Color.blue.opacity(0.7)
                     .ignoresSafeArea()
-                Text("4x4")
+                VStack {
+                    Text("4x4")
+                        .font(Font.custom("Marker Felt", size: 35))
+                    Text("Disney Characters")
+                        .font(Font.custom("Marker Felt", size: 20))
+                }
             }
         }
     }
