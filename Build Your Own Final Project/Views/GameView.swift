@@ -11,12 +11,9 @@ struct GameView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.blue.opacity(0.7).ignoresSafeArea()
-                VStack {
-                    Text("5x5 grid")
-                        .font(.title)
-                        .fontWeight(.bold)
-                }
+                Color.blue.opacity(0.7)
+                    .ignoresSafeArea()
+                Text("4x4")
             }
         }
     }
