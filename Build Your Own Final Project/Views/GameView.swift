@@ -18,8 +18,40 @@ struct GameView: View {
                         .font(Font.custom("Marker Felt", size: 35))
                     Text("Disney Characters")
                         .font(Font.custom("Marker Felt", size: 20))
+                    Spacer()
+                    HStack {
+                        ZStack(content:{
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundColor(.white)
+                            RoundedRectangle(cornerRadius: 12)
+                                .strokeBorder(lineWidth: 2)
+                            Image("mickey").font(.largeTitle)
+                        })
+                        ZStack(content:{
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundColor(.white)
+                            RoundedRectangle(cornerRadius: 12)
+                                .strokeBorder(lineWidth: 2)
+                            Image("mickey").font(.largeTitle)
+                        })
+                        ZStack(content:{
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundColor(.white)
+                            RoundedRectangle(cornerRadius: 12)
+                                .strokeBorder(lineWidth: 2)
+                            Image("mickey").font(.largeTitle)
+                        })
+                        ZStack(content:{
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundColor(.white)
+                            RoundedRectangle(cornerRadius: 12)
+                                .strokeBorder(lineWidth: 2)
+                            Image("mickey").font(.largeTitle)
+                        })
+                    }
                 }
             }
+           
         }
     }
 }
