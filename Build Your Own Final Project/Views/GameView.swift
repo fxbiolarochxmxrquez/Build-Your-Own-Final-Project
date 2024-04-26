@@ -10,8 +10,11 @@ import SwiftUI
 struct GameView: View {
     var body: some View {
         NavigationView {
-            Color.blue.opacity(0.7)
-                .ignoresSafeArea()
+            ZStack {
+                Color.blue.opacity(0.7)
+                    .ignoresSafeArea()
+                Text("4x4")
+            }
         }
         
     }
