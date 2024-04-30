@@ -9,7 +9,23 @@ import SwiftUI
 
 struct GridOptions: View {
     var body: some View {
-        Image("")
+        ZStack {
+            Color.red.opacity(0.9).ignoresSafeArea()
+            VStack {
+                VStack {
+                    Text("Pick Your Size")
+                        .font(Font.custom("Marker Felt", size: 35))
+                    
+                }
+                NavigationLink {
+                    GameView()
+                } label: {
+                    CustomButton(text: "4x4")
+                        .cornerRadius(25)
+                        .shadow(radius: 20)
+                }
+            }
+        }
     }
 }
 
