@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.blue.opacity(0.7).ignoresSafeArea()
+                Color.red.opacity(0.9).ignoresSafeArea()
                 VStack {
                     VStack {
                         Text("Find Your Match!")

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GridOptions: View {
     var body: some View {
-        Text("Pick Your Size")
+        Image("")
     }
 }
 

@@ -12,7 +12,7 @@ struct GameView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.blue.opacity(0.7).ignoresSafeArea()
+                Color.red.opacity(0.9).ignoresSafeArea()
                 VStack {
                     Text("4x4")
                         .font(Font.custom("Marker Felt", size: 35))
@@ -27,7 +27,7 @@ struct GameView: View {
                                 base.strokeBorder(lineWidth: 2)
                                 Image("mickey").resizable()
                             } else {
-                                base.fill()
+                                base.fill(.yellow)
                             }
                         }
                         .onTapGesture {
@@ -43,3 +43,4 @@ struct GameView: View {
 #Preview {
     GameView()
 }
+
