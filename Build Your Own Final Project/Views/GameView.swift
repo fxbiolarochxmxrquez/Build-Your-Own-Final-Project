@@ -25,7 +25,7 @@ struct GameView: View {
                             if isFaceUp {
                                 base.foregroundColor(.white)
                                 base.strokeBorder(lineWidth: 2)
-                                Image("mickey").resizable()
+                                Image("mickey").resizable().cornerRadius(12)
                             } else {
                                 base.fill(.yellow)
                             }
