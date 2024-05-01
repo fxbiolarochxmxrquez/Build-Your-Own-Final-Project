@@ -20,18 +20,25 @@ struct GameView: View {
                         .font(Font.custom("Marker Felt", size: 20))
                     Spacer()
                     HStack {
-                        ZStack {
-                            let base = RoundedRectangle(cornerRadius: 12)
-                            if isFaceUp {
-                                base.foregroundColor(.white)
-                                base.strokeBorder(lineWidth: 2)
+                        if isFaceUp {
+                            ZStack(content: {
+                                RoundedRectangle(cornerRadius: 12)
                                 Image("mickey").resizable().cornerRadius(12)
-                            } else {
-                                base.fill(.yellow)
-                            }
-                        }
-                        .onTapGesture {
-                            isFaceUp.toggle()
+                            })
+                            ZStack(content: {
+                                RoundedRectangle(cornerRadius: 12)
+                                Image("mickey").resizable().cornerRadius(12)
+                            })
+                            ZStack(content: {
+                                RoundedRectangle(cornerRadius: 12)
+                                Image("mickey").resizable().cornerRadius(12)
+                            })
+                            ZStack(content: {
+                                RoundedRectangle(cornerRadius: 12)
+                                Image("mickey").resizable().cornerRadius(12)
+                            })
+                        } else {
+                            RoundedRectangle(cornerRadius: 12)
                         }
                     }
                 }
