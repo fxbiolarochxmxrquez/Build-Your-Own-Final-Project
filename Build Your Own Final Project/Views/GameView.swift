@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct GameView: View {
-    var isFaceUp: Bool = false
+    @State private var image = ""
+    let images = ["daisy", "donald", "dumbo", "mickey", "minnie", "stitch", "tigger", "winnie"]
     var body: some View {
         ZStack {
             Color.red.opacity(0.9).ignoresSafeArea()
@@ -18,20 +19,33 @@ struct GameView: View {
                 Text("Disney Characters")
                     .font(Font.custom("Marker Felt", size: 20))
                 Spacer()
-                ZStack(content: {
-                    if isFaceUp {
-                        RoundedRectangle(cornerRadius: 12)
-                            .foregroundColor(.yellow)
-                        RoundedRectangle(cornerRadius: 12)
-                            .strokeBorder(lineWidth: 2)
-                        Image("mickey").resizable().cornerRadius(12)
-                            .padding()
-                    } else {
-                        RoundedRectangle(cornerRadius: 12)
-                            .foregroundColor(.yellow)
+                HStack {
+                    ForEach(images.indices, id: \.self) { index in
+                        CardView(content: images[index])
                     }
-                })
+                }
             }
+        }
+    }
+}
+
+struct CardView: View {
+    let content: String
+    @State private var isFaceUp = true
+    var body: some View {
+        ZStack {
+            let base = RoundedRectangle(cornerRadius: 12)
+            if isFaceUp {
+                base.foregroundColor(.yellow)
+                base.strokeBorder(lineWidth: 2)
+                Image(content).resizable().cornerRadius(12)
+                    .padding()
+            } else {
+                base.foregroundColor(.yellow)
+            }
+        }
+        .onTapGesture {
+            isFaceUp.toggle()
         }
     }
 }
