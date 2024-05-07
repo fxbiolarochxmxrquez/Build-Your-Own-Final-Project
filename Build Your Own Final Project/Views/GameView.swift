@@ -9,8 +9,8 @@ import SwiftUI
 
 struct GameView: View {
     @State private var image = ""
-    let images = ["daisy", "donald", "dumbo", "mickey", "minnie", "stitch", "tigger", "winnie"]
-    var cardCount: Int = 8
+    let images = ["daisy", "mickey", "stitch", "donald", "minnie", "winnie", "tigger", "dumbo", "daisy","donald","mickey","tigger", "dumbo", "stitch", "minnie", "winnie"]
+    var cardCount: Int = 16
     var body: some View {
         ZStack {
             Color.red.opacity(0.9).ignoresSafeArea()
@@ -19,7 +19,7 @@ struct GameView: View {
                     .font(Font.custom("Marker Felt", size: 35))
                 Text("Disney Characters")
                     .font(Font.custom("Marker Felt", size: 20))
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))]) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 88))]) {
                     ForEach(0..<cardCount, id: \.self) { index in
                         CardView(content: images[index])
                             .aspectRatio(2/3, contentMode: .fit)
