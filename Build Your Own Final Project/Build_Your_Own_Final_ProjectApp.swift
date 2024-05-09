@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Build_Your_Own_Final_ProjectApp: App {
+    @StateObject var game = CardMemoryGame()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameView(viewModel: game)
         }
     }
 }

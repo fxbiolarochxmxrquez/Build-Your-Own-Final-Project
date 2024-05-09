@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-class CardMemoryGame {
+class CardMemoryGame: ObservableObject {
     private static let images = ["daisy", "donald", "dumbo", "mickey", "minnie", "stitch", "tigger", "winnie"]
     
     private static func createMemoryGame() -> MemoryGame<String> {
-        return MemoryGame(numberOfPairsOfCards: 4) { pairIndex in
+        return MemoryGame(numberOfPairsOfCards: 8) { pairIndex in
             if images.indices.contains(pairIndex) {
                 return images[pairIndex]
             } else {
@@ -21,10 +21,16 @@ class CardMemoryGame {
         }
     }
     
-    private var model = createMemoryGame()
+    @Published private var model = createMemoryGame()
     
     var cards: Array<MemoryGame<String>.Card> {
         return model.cards
+    }
+    
+    //MARK: - Intents
+    
+    func shuffle() {
+        model.shuffle()
     }
     
     func choose(_ card: MemoryGame<String>.Card) {

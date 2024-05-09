@@ -18,7 +18,7 @@ struct GridOptions: View {
                     
                 }
                 NavigationLink {
-                    GameView()
+                    GameView(viewModel: CardMemoryGame())
                 } label: {
                     CustomButton(text: "4x4")
                         .cornerRadius(25)
