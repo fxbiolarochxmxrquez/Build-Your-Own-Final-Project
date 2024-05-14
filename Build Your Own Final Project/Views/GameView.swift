@@ -31,6 +31,7 @@ struct GameView: View {
                 Button("Shuffle") {
                     viewModel.shuffle()
                 }
+                .background(Color.yellow)
             }
         }
     }
@@ -47,6 +48,8 @@ struct CardView: View {
             Group {
                 base.foregroundColor(.yellow)
                 base.strokeBorder(lineWidth: 2)
+                PieCoundownTimer(endAngle: .degrees(240))
+                    .opacity(0.4)
                 Image(card.content).resizable().cornerRadius(12)
                     .padding()
             }
