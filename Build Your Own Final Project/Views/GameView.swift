@@ -64,3 +64,4 @@ struct CardView: View {
     GameView(viewModel: CardMemoryGame())
 }
 
+// lecture 6 @ 54:46
