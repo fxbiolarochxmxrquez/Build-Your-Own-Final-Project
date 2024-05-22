@@ -22,9 +22,12 @@ class CardMemoryGame: ObservableObject {
     }
     
     @Published private var model = createMemoryGame()
-    
     var cards: Array<MemoryGame<String>.Card> {
         return model.cards
+    }
+    
+    var score: Int {
+        model.score
     }
     
     //MARK: - Intents

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1092732BFE42E100E5EDCA /* FlyingNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1092722BFE42E100E5EDCA /* FlyingNumber.swift */; };
 		BD8028602BC9841600369BB7 /* Build_Your_Own_Final_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80285F2BC9841600369BB7 /* Build_Your_Own_Final_ProjectApp.swift */; };
 		BD8028622BC9841600369BB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8028612BC9841600369BB7 /* ContentView.swift */; };
 		BD8028642BC9841700369BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8028632BC9841700369BB7 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD1092722BFE42E100E5EDCA /* FlyingNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlyingNumber.swift; path = "Build Your Own Final Project/Funtionalities/FlyingNumber.swift"; sourceTree = SOURCE_ROOT; };
 		BD80285C2BC9841600369BB7 /* Build Your Own Final Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Build Your Own Final Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80285F2BC9841600369BB7 /* Build_Your_Own_Final_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build_Your_Own_Final_ProjectApp.swift; sourceTree = "<group>"; };
 		BD8028612BC9841600369BB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,10 +85,11 @@
 		BDFEA1482BE920330081B60B /* Funtionalities */ = {
 			isa = PBXGroup;
 			children = (
-				BDFEA1492BE920B20081B60B /* MemoryGame.swift */,
-				BDFEA14B2BE922820081B60B /* CardMemoryGame.swift */,
-				BDFEA14D2BF1B03B0081B60B /* PieCoundownTimer.swift */,
 				BDFEA14F2BF1BB820081B60B /* Cardify.swift */,
+				BDFEA14B2BE922820081B60B /* CardMemoryGame.swift */,
+				BD1092722BFE42E100E5EDCA /* FlyingNumber.swift */,
+				BDFEA1492BE920B20081B60B /* MemoryGame.swift */,
+				BDFEA14D2BF1B03B0081B60B /* PieCoundownTimer.swift */,
 			);
 			path = Funtionalities;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			files = (
 				BDFEA14C2BE922820081B60B /* CardMemoryGame.swift in Sources */,
 				BD8028622BC9841600369BB7 /* ContentView.swift in Sources */,
+				BD1092732BFE42E100E5EDCA /* FlyingNumber.swift in Sources */,
 				BDFEA1502BF1BB820081B60B /* Cardify.swift in Sources */,
 				E28B96DC2BD6B20F00E33E47 /* GameView.swift in Sources */,
 				E28B96E22BD94EDB00E33E47 /* GridOptions.swift in Sources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GameView: View {
+    typealias Card = MemoryGame<String>.Card
     @ObservedObject var viewModel: CardMemoryGame
     var body: some View {
         ZStack {
@@ -22,18 +23,30 @@ struct GameView: View {
                         CardView(card)
                             .aspectRatio(2/3, contentMode: .fit)
                             .padding(4)
+                            .overlay(FlyingNumber(number: scoreChange(causedBy: card)))
                             .onTapGesture {
-                                viewModel.choose(card)
+                                withAnimation {
+                                    viewModel.choose(card)
+                                }
                             }
-                            .animation(.default, value: viewModel.cards)
                     }
                 }
-                Button("Shuffle") {
-                    viewModel.shuffle()
+                HStack {
+                    Text("Score: \(viewModel.score)")
+                        .animation(nil)
+                    Spacer()
+                    Button("Shuffle") {
+                        withAnimation {
+                            viewModel.shuffle()
+                        }
+                    }
                 }
-                .background(Color.yellow)
+                .padding()
             }
         }
+    }
+    private func scoreChange(causedBy card: Card) -> Int {
+        return 0
     }
 }
 
@@ -43,25 +56,19 @@ struct CardView: View {
         self.card = card
     }
     var body: some View {
-        ZStack {
-            let base = RoundedRectangle(cornerRadius: 12)
-            Group {
-                base.foregroundColor(.yellow)
-                base.strokeBorder(lineWidth: 2)
-                PieCoundownTimer(endAngle: .degrees(240))
-                    .opacity(0.4)
+        PieCoundownTimer(endAngle: .degrees(240))
+            .opacity(0.4)
+            .overlay(
                 Image(card.content).resizable().cornerRadius(12)
-                    .padding()
-            }
-            .opacity(card.isFaceUp ? 1 : 0)
-            base.foregroundColor(.yellow).opacity(card.isFaceUp ? 0 : 1)
-        }
-        .opacity(card.isFaceUp || !card.isMatched ? 1 : 0)
+                    .multilineTextAlignment(.center)
+                    .padding(5)
+            )
+            .padding(5)
+            .cardify(isFaceUp: card.isFaceUp)
+            .opacity(card.isFaceUp || !card.isMatched ? 1 : 0)
     }
 }
 
 #Preview {
     GameView(viewModel: CardMemoryGame())
 }
-
-// lecture 6 @ 54:46
