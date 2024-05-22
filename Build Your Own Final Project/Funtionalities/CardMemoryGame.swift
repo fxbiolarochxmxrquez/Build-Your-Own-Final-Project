@@ -8,22 +8,26 @@
 import SwiftUI
 
 class CardMemoryGame: ObservableObject {
+    typealias Card = MemoryGame<String>.Card
     private static let images = ["daisy", "donald", "dumbo", "mickey", "minnie", "stitch", "tigger", "winnie"]
-    
     private static func createMemoryGame() -> MemoryGame<String> {
         return MemoryGame(numberOfPairsOfCards: 8) { pairIndex in
             if images.indices.contains(pairIndex) {
                 return images[pairIndex]
             } else {
                 return ""
-                //do we need this return function?
             }
         }
     }
     
     @Published private var model = createMemoryGame()
-    var cards: Array<MemoryGame<String>.Card> {
-        return model.cards
+    
+    var cards: Array<Card> {
+      model.cards
+    }
+    
+    var color: Color {
+        .yellow
     }
     
     var score: Int {
@@ -36,7 +40,7 @@ class CardMemoryGame: ObservableObject {
         model.shuffle()
     }
     
-    func choose(_ card: MemoryGame<String>.Card) {
+    func choose(_ card: Card) {
         model.choose(card)
     }
 }
